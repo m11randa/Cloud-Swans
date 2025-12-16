@@ -1,20 +1,16 @@
-/* ===========================
-   RESET I IMPORT CZCIONEK
-=========================== */
+/* RESET I IMPORT CZCIONEK */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@400;700&family=Cormorant+Garamond:wght@600&display=swap');
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* ===========================
-   PODSTAWOWE STYLE
-=========================== */
+/* PODSTAWOWE STYLE I ESTETYCZNE TŁO - MOCNIEJSZY RÓŻOWO-BIAŁY GRADIENT */
 body {
     font-family: 'Poppins', sans-serif; 
     line-height: 1.7;
+    /* Mocniejszy różowo-biały gradient */
     background: linear-gradient(135deg, #fdf6f9 0%, #fae6ed 100%); 
     color: #4a4a4a;
     scroll-behavior: smooth;
@@ -24,6 +20,7 @@ body {
 /* NAGŁÓWKI */
 h1, h2, h3, h4 {
     font-family: 'Playfair Display', serif;
+    color: #5d5d5d;
     margin-bottom: 0.8em;
     font-weight: 700;
 }
@@ -60,9 +57,7 @@ a:hover {
     color: #8c5b6e;
 }
 
-/* ===========================
-   NAGŁÓWEK I LOGO
-=========================== */
+/* NAGŁÓWEK STAŁY I OKRĄGŁE LOGO */
 header {
     background-color: rgba(255, 255, 255, 0.98);
     padding: 15px 5%;
@@ -90,6 +85,7 @@ header {
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
 }
 
+/* ZMIENIONA CZCIONKA NAGŁÓWKA LOGO */
 .logo-container h1 {
     font-size: 1.8em;
     color: #c994ad;
@@ -99,39 +95,36 @@ header {
     letter-spacing: 1px;
 }
 
-/* MENU */
+/* MENU I AKTYWNA ZAKŁADKA */
 nav ul {
     list-style: none;
     display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
 }
 
-nav ul li a {
-    text-decoration: none;
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul a {
     color: #666666;
     font-weight: 500;
     padding: 8px 0;
     transition: all 0.3s ease;
 }
 
-nav ul li a:hover,
-nav ul li a.active {
+nav ul a:hover, nav ul a.active {
     color: #b3738e;
     border-bottom: 2px solid #e6a7c0;
 }
 
-/* ===========================
-   GŁÓWNA TREŚĆ
-=========================== */
+/* GŁÓWNA TREŚĆ PODSTRON */
 .main-content {
     padding: 80px 5%;
     max-width: 1300px;
     margin: 0 auto;
 }
 
-/* BLOKI SEKCJI */
+/* BLOKI SEKCJI Z CIENIEM I BIAŁYM TŁEM */
 .section-block {
     margin-bottom: 60px;
     padding: 50px;
@@ -140,125 +133,124 @@ nav ul li a.active {
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
     transition: box-shadow 0.3s ease;
 }
-
 .section-block:hover {
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12); /* Animacja cienia na hover */
 }
 
-/* ===========================
-   ZARZĄD
-=========================== */
-.management-owner {
-    text-align: center;
-    max-width: 450px;
-    margin: 0 auto 60px;
-}
-
-.management-owner .member-card {
-    border-top: 5px solid #b3738e;
-    background-color: #fffafb;
-    padding: 40px 30px;
+/* STRONA GŁÓWNA - LEKKI UKŁAD */
+.hero-image {
+    width: 100%;
+    height: 650px;
+    background-position: center;
+    background-size: cover;
     display: flex;
     justify-content: center;
-    margin-bottom: 40px;
+    align-items: center;
+    color: white;
+    text-align: center;
+    margin-bottom: 70px;
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
-.management-grid {
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.5) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image h1 {
+    font-size: 5em;
+    color: #ffffff;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.intro-text-center {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: 1.15em;
+    padding-bottom: 30px;
+}
+
+.feature-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    /* Automatycznie dostosowuje siatkę, by pomieścić 4 kafelki na szerokich ekranach */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
     margin-top: 40px;
 }
 
-.member-card {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    padding: 15px;
+.feature-box {
+    padding: 30px;
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fcf7f9;
+    border-radius: 10px;
+    border-top: 5px solid #e6a7c0;
+    transition: transform 0.3s ease;
 }
 
-.member-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+.feature-box:hover {
+    transform: translateY(-5px); 
 }
 
-.member-photo {
-    width: 150px;
-    height: 150px;
-    background-color: #f7e8ef;
-    border: 3px solid #e6a7c0;
-    border-radius: 12px;
-    margin: 0 auto 15px;
-    overflow: hidden;
-}
-
-.member-photo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 12px;
-}
-
-.member-card h3 {
-    font-size: 1.2rem;
-    margin-bottom: 5px;
-    color: #c994ad;
-}
-
-.member-card h4 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1rem;
-    color: #555;
-    font-weight: 500;
+.feature-box h4 {
+    color: #b3738e;
+    font-size: 1.5em;
     margin-bottom: 10px;
-    border-bottom: 1px dotted #f0e0e6;
-    padding-bottom: 5px;
 }
 
-.member-card p {
-    font-size: 0.95rem;
-    margin-top: 15px;
-    line-height: 1.6;
-    color: #333;
-}
-
-/* ===========================
-   REKRUTACJA
-=========================== */
+/* REKRUTACJA - BIAŁE TŁA Z PASKIEM BOCZNYM */
 .recruitment-block {
     padding: 30px;
     border-radius: 10px;
     margin-bottom: 30px;
 }
 
+.recruitment-block h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #b3738e;
+}
+
 .recruitment-for {
-    background-color: #ffffff;
-    border-left: 5px solid #e6a7c0;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    background-color: #ffffff; /* Czysto białe tło */
+    border-left: 5px solid #e6a7c0; /* Różowy pasek */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); 
 }
 
 .recruitment-against {
-    background-color: #ffffff;
-    border-left: 5px solid #d4a2b8;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff; /* Czysto białe tło */
+    border-left: 5px solid #d4a2b8; /* Ciemniejszy różowy pasek */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
 }
 
+/* NOWY STYL DLA OKIENKA STATUSU REKRUTACJI */
 .recruitment-status {
     width: 100%;
-    max-width: 600px;
-    margin: 0 auto 50px;
+    max-width: 600px; /* Ograniczenie szerokości na środku */
+    margin: 0 auto 50px; /* Centrowanie i dolny margines */
     padding: 20px;
-    background-color: #f7e8ef;
+    background-color: #f7e8ef; /* Delikatnie różowe tło */
     border: 2px solid #e6a7c0;
     border-radius: 12px;
     text-align: center;
-    cursor: help;
+    cursor: help; /* Zmiana kursora na wskaźnik podpowiedzi */
     position: relative;
     overflow: hidden;
     transition: all 0.4s ease;
-    height: 85px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    height: 85px; /* Ustalona wysokość, aby animacja była płynna */
 }
 
 .recruitment-status h3 {
@@ -266,12 +258,12 @@ nav ul li a.active {
     color: #b3738e;
     font-size: 1.5em;
     font-weight: 600;
+    transition: opacity 0.4s ease, transform 0.4s ease;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 90%;
-    transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
 .status-details {
@@ -280,7 +272,7 @@ nav ul li a.active {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #e6a7c0;
+    background-color: #e6a7c0; /* Różowe tło po najechaniu */
     color: white;
     display: flex;
     flex-direction: column;
@@ -296,6 +288,7 @@ nav ul li a.active {
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
 }
 
+/* EFEKT HOVER: Pokaż szczegóły, ukryj nagłówek */
 .recruitment-status:hover .status-details {
     opacity: 1;
     transform: translateY(0);
@@ -303,28 +296,153 @@ nav ul li a.active {
 
 .recruitment-status:hover h3 {
     opacity: 0;
-    transform: translate(-50%, -150%);
+    transform: translate(-50%, -150%); /* Wypchnięcie nagłówka poza pole widzenia */
 }
 
-/* ===========================
-   ANIMACJE
-=========================== */
-.animate-in {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInSlide 0.8s ease-out forwards;
+/* STRÓJ KLUBOWY - UKŁAD Z OBRAZKIEM NA GÓRZE */
+
+/* Główny kontener stroju - w tej chwili to jest sekcja-blok */
+.clothing-layout-top-image {
+    /* Utrzymujemy padding z sekcji-blok */
+    display: flex;
+    flex-direction: column; /* Wszystkie elementy ułożone pionowo */
+    gap: 25px; /* Odstęp między sekcjami wewnątrz bloku */
 }
 
-@keyframes fadeInSlide {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+/* Blok obrazka - Pełna szerokość na górze */
+.clothing-image-top {
+    width: 100%;
+    padding: 20px;
+    background-color: #fffafa;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
 }
 
-/* ===========================
-   STOPKA
-=========================== */
+.clothing-image-top img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: contain;
+    /* Maksymalna wysokość, aby obrazek nie był przesadnie duży */
+    max-height: 500px;
+}
+
+/* Blok kosztów pod obrazkiem */
+.cost-block-top {
+    padding: 20px;
+    background-color: #f7e8ef;
+    border: 1px solid #e6a7c0;
+    border-radius: 12px;
+    text-align: center;
+    color: #b3738e;
+    font-weight: 500;
+    font-size: 1.05em;
+    max-width: 500px; /* Ograniczenie szerokości bloku kosztów */
+    margin: 0 auto; /* Wyśrodkowanie bloku kosztów */
+}
+
+/* Kontener list (pod obrazkiem) - układ dwukolumnowy na PC */
+.clothing-details-bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dwie równe kolumny */
+    gap: 30px;
+    margin-top: 15px; /* Odstęp od nagłówka */
+}
+
+.clothing-item {
+    padding: 25px;
+    border: 1px solid #f0e0e6;
+    border-radius: 12px;
+    background-color: #fffafa;
+    transition: background-color 0.3s ease;
+    height: 100%; /* Ważne, aby bloki były równe */
+}
+
+.clothing-item:hover {
+    background-color: #fef8f9;
+}
+
+.clothing-item h4 {
+    color: #b3738e;
+    font-size: 1.4em;
+    border-bottom: 1px dotted #f0e0e6;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* LISTY Z WŁASNĄ IKONĄ */
+ul {
+    list-style: none; 
+    padding-left: 0;
+    margin-top: 15px;
+}
+
+ul li {
+    margin-bottom: 12px;
+    position: relative;
+    padding-left: 30px;
+}
+
+.custom-bullet::before {
+    content: '✧'; 
+    color: #e6a7c0;
+    font-size: 1.2em;
+    position: absolute;
+    left: 0;
+    top: -2px;
+    width: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+/* PRZYCISKI CTA */
+.cta-button {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.button {
+    display: inline-block;
+    padding: 15px 40px;
+    background-color: #e6a7c0;
+    color: white;
+    border-radius: 50px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button:hover {
+    background-color: #c994ad;
+    transform: translateY(-3px);
+}
+
+/* GALERIA - NAPRAWIONE STYLE */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
+    gap: 30px; 
+    margin-top: 40px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.03); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* STOPKA */
 footer {
     background-color: #fdfdfd;
     color: #7a7a7a;
@@ -353,23 +471,225 @@ footer p {
     font-size: 0.95em;
 }
 
-/* ===========================
-   RESPONSYWNOŚĆ
-=========================== */
+/* ANIMACJA WJAZDU ELEMENTÓW */
+.animate-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInSlide 0.8s ease-out forwards;
+}
+
+@keyframes fadeInSlide {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ================================== */
+/* 7. NOWE STYLE DLA ZARZĄDU          */
+/* ================================== */
+
+.management-owner {
+    text-align: center;
+    max-width: 450px; /* Ograniczenie szerokości bloku Właścicielki na środku */
+    margin: 0 auto 60px; /* Margines na dole */
+}
+
+.management-owner .member-card {
+    border-top: 5px solid #b3738e; /* Wyróżnienie */
+    background-color: #fffafb;
+    padding: 40px 30px;
+}
+
+.management-grid {
+    display: grid;
+    /* Dwie równe kolumny */
+    grid-template-columns: 1fr 1fr; 
+    gap: 40px 30px; /* Większy odstęp pionowy */
+    margin-top: 40px;
+}
+
+.member-card {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.member-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.member-photo-placeholder {
+    width: 150px;
+    height: 150px;
+    background-color: #f7e8ef;
+    border: 3px solid #e6a7c0;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.85em;
+    color: #b3738e;
+    font-weight: 600;
+    text-align: center;
+    overflow: hidden; /* Na wypadek, gdybyś wstawił obrazek większy niż 150px */
+}
+
+.member-photo-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.member-card h3 {
+    font-size: 1.6em;
+    margin-bottom: 5px;
+    color: #c994ad;
+}
+
+.member-card h4 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1em;
+    color: #6a6a6a;
+    font-weight: 500;
+    margin-bottom: 15px;
+    border-bottom: 1px dotted #f0e0e6;
+    padding-bottom: 10px;
+}
+
+.member-card p {
+    font-size: 0.95em;
+    margin-top: 15px;
+    line-height: 1.6;
+}
+
+/* ================================== */
+/* 8. RESPONSIVE DESIGN (TELEFONY)   */
+/* ================================== */
 @media (max-width: 900px) {
-    .main-content { padding: 40px 20px; }
-    .section-block { padding: 30px 20px; }
-    h2 { font-size: 2.2em; margin-bottom: 1.5em; }
-    header { flex-direction: column; padding: 15px 3%; text-align: center; }
-    .logo-container { margin-bottom: 10px; }
-    .logo-container h1 { font-size: 1.6em; }
-    nav ul { flex-wrap: wrap; justify-content: center; margin-top: 0; }
-    nav ul li { margin: 5px 8px; }
-    nav ul li a { font-size: 0.9em; padding: 5px 0; }
-    .management-owner { max-width: 100%; margin-bottom: 40px; }
-    .management-grid { grid-template-columns: 1fr; gap: 25px; }
-    footer { padding: 30px 3%; }
-    .social-links { margin-bottom: 15px; }
-    .social-links img { width: 30px; height: 30px; }
-    footer p { margin-top: 10px; }
+    
+    .main-content {
+        /* Poprawiony padding, aby treści nie przylegały do krawędzi */
+        padding: 40px 20px; 
+    }
+    
+    .section-block {
+        /* Mniejszy padding w sekcjach na telefonie */
+        padding: 30px 20px; 
+    }
+
+    h2 {
+        font-size: 2.2em;
+        margin-bottom: 1.5em;
+    }
+
+    /* NAGŁÓWEK */
+    header {
+        flex-direction: column;
+        padding: 15px 3%;
+        text-align: center;
+    }
+
+    .logo-container {
+        margin-bottom: 10px; /* Zmniejszono odstęp */
+    }
+    
+    .logo-container h1 {
+        font-size: 1.6em;
+    }
+    
+    /* MENU - Poprawa, aby było bardziej zwarte */
+    nav {
+        width: 100%;
+    }
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 0;
+    }
+    nav ul li {
+        margin: 5px 8px; /* Mniejszy margines między linkami */
+    }
+    nav ul a {
+        font-size: 0.9em;
+        padding: 5px 0;
+        white-space: nowrap; 
+    }
+
+    /* SEKCJA GŁÓWNA (HERO) */
+    .hero-image {
+        height: 350px;
+        margin-bottom: 40px;
+        background-position: 60% center; 
+    }
+    .hero-image h1 {
+        font-size: 3em;
+    }
+    .intro-text-center {
+        font-size: 1em;
+        padding-bottom: 20px;
+    }
+    
+    /* SIATKI (FEATURE I GALERIA) */
+    .feature-grid {
+        grid-template-columns: 1fr; /* Jeden element na rząd */
+        gap: 20px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr; /* Jeden obraz na rząd */
+        gap: 20px; 
+    }
+    .gallery-grid img {
+        height: auto; 
+    }
+
+    /* STRÓJ KLUBOWY - ZMIANA NA UKŁAD PIONOWY */
+    .clothing-details-bottom {
+        grid-template-columns: 1fr; /* Zmiana z 2 kolumn na 1 na telefonach */
+        gap: 20px;
+    }
+    
+    .clothing-image-top img {
+        max-height: 300px;
+    }
+    
+    /* REKRUTACJA */
+    .recruitment-block {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    /* ZARZĄD - Zmiana na 1 kolumnę */
+    .management-owner {
+         max-width: 100%; /* Właścicielka może się rozszerzyć */
+         margin-bottom: 40px;
+    }
+
+    .management-grid {
+        grid-template-columns: 1fr; /* Zmiana z 2 kolumn na 1 na telefonach */
+        gap: 25px;
+    }
+
+    /* STOPKA */
+    footer {
+        padding: 30px 3%;
+    }
+    .social-links {
+        margin-bottom: 15px; /* Dodatkowy odstęp */
+    }
+    .social-links img {
+        width: 30px;
+        height: 30px;
+    }
+    /* Tekst w stopce ma mniejszy margines na telefonie */
+    footer p {
+        margin-top: 10px;
+    }
 }
