@@ -5,83 +5,165 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cloud Swans | Strój Klubowy</title>
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        .full-width-image-container {
+            width: 100%;
+            max-width: 1000px;
+            margin: 30px auto;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .full-width-image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* === STRÓJ KLUBOWY – RESPONSYWNOŚĆ === */
+
+        .outfit-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .outfit-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .outfit-grid > div {
+                padding: 0 !important;
+                border-right: none !important;
+            }
+
+            .section-block {
+                padding: 20px !important;
+            }
+
+            .section-block ul li {
+                font-size: 0.95em;
+                line-height: 1.5;
+            }
+
+            h3 {
+                font-size: 1.4em !important;
+            }
+
+            h4 {
+                font-size: 1.2em !important;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
-    <header>
-        <div class="logo-container">
-            <img src="logo.png" alt="Logo Cloud Swans">
-            <h1>Cloud Swans</h1>
+<header>
+    <div class="logo-container">
+        <img src="logo.png" alt="Logo Cloud Swans">
+        <h1>Cloud Swans</h1>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="oklubie.html">O Klubie</a></li>
+            <li><a href="rekrutacja.html">Rekrutacja</a></li>
+            <li><a href="strojklubowy.html" class="active">Strój Klubowy</a></li>
+            <li><a href="galeria.html">Galeria</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="main-content">
+
+    <h2>Strój Klubowy</h2>
+
+    <div class="intro-text-center animate-in" style="animation-delay: 0.1s;">
+        <p style="font-size: 1.1em; max-width: 800px; margin: 0 auto 30px;">
+            Strój klubowy jest <strong>obowiązkowy</strong> na wszystkich oficjalnych spotkaniach.
+            Na jego skompletowanie masz <strong>30 dni</strong> od daty dołączenia.
+        </p>
+    </div>
+
+    <div class="animate-in" style="animation-delay: 0.3s; text-align: center;">
+        <div class="full-width-image-container">
+            <img src="outfit2.png" alt="Postać klubowa na koniu w pełnym stroju klubowym">
         </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="oklubie.html">O Klubie</a></li>
-                <li><a href="rekrutacja.html">Rekrutacja</a></li>
-                <li><a href="strojklubowy.html" class="active">Strój Klubowy</a></li>
-                <li><a href="galeria.html">Galeria</a></li>
-            </ul>
-        </nav>
-    </header>
+    </div>
 
-    <main class="main-content">
-        <h2>✧ Wymagane Elementy Stroju ✧</h2>
+    <div class="section-block animate-in"
+         style="animation-delay: 0.5s; padding: 30px; border: 2px solid var(--secondary-color);
+         box-shadow: 0 8px 20px rgba(0,0,0,0.15); margin-bottom: 30px;
+         border-radius: 12px; background-color: #FFFFFF;">
 
-        <div class="section-block clothing-layout-top-image animate-in" style="animation-delay: 0.1s;">
-            
-            <div class="clothing-image-top">
-                <img src="stroj_klubowy_glowny.png" alt="Strój klubowy postaci i konia Fryzyjskiego">
+        <h3 style="text-align: center; color: var(--primary-color); font-size: 1.8em;
+            margin-bottom: 30px; border-bottom: 2px solid var(--secondary-color); padding-bottom: 10px;">
+            ✧ Wymagane Elementy Stroju ✧
+        </h3>
+
+        <div class="outfit-grid">
+
+            <!-- POSTAĆ -->
+            <div style="padding-right: 15px; border-right: 1px dashed #e6a7c0;">
+                <h4 style="color: var(--primary-color); font-size: 1.4em; margin-bottom: 15px; text-align: center;">
+                    ୨ৎ Strój dla Postaci
+                </h4>
+                <ul style="list-style: none; padding-left: 0;">
+                    <li>✧ Stokrotkowy kapelusz Adder</li>
+                    <li>✧ Biały golf jesienna akademia</li>
+                    <li>✧ Jasno-różowe spodnie do ujeżdżania</li>
+                    <li>✧ Rękawiczki piękna niewiasta</li>
+                    <li>✧ Białe botki jeździeckie</li>
+                </ul>
             </div>
 
-            <div class="cost-block-top">
-                <h4>Koszty</h4>
-                <p>Całkowity Koszt (za sam strój):</p>
-                <p style="font-size: 1.3em; font-weight: 700;">71 650 JS lub 833 SC</p>
-                <p style="font-size: 0.85em; margin-top: 5px;">(+ 950 SC koń + 19 SC grzywa)</p>
+            <!-- KOŃ -->
+            <div style="padding-left: 15px;">
+                <h4 style="color: var(--primary-color); font-size: 1.4em; margin-bottom: 15px; text-align: center;">
+                    ୨ৎ Sprzęt dla Konia
+                </h4>
+                <ul style="list-style: none; padding-left: 0;">
+                    <li>✧ <strong>Koń Fryzyjski 3 Gen.</strong></li>
+                    <li>✧ Srebrno-czarne siodło do ujeżdżania</li>
+                    <li>✧ Czarne ogłowie z nachrapnikiem</li>
+                    <li>✧ Wyściełana biała podkładka pod siodło</li>
+                    <li>✧ Owijki ze zdjęcia</li>
+                    <li>✧ Śnieżnobiałe kokardy Sunset Trails</li>
+                </ul>
             </div>
-            
-            <p style="text-align: center; margin-top: 20px; color: #888;">
-                Pamiętaj: biało-różowa estetyka jest kluczowa. Koń musi być rasy **Koń Fryzyjski 3. Generacji** w maści siwej.
-            </p>
 
-            <div class="clothing-details-bottom">
-
-                <div class="clothing-item">
-                    <h4>Strój dla Postaci</h4>
-                    <ul>
-                        <li class="custom-bullet">Stokrotkowy kapelusz Adder</li>
-                        <li class="custom-bullet">Biały golf jesienna akademia</li>
-                        <li class="custom-bullet">Jasno-różowe spodnie do ujeżdżania</li>
-                        <li class="custom-bullet">Rękawiczki piękna niewiasta</li>
-                        <li class="custom-bullet">Białe botki jeździeckie</li>
-                    </ul>
-                </div>
-
-                <div class="clothing-item">
-                    <h4>Sprzęt dla Konia</h4>
-                    <ul>
-                        <li class="custom-bullet">Koń Fryzyjski 3 Gen.</li>
-                        <li class="custom-bullet">Srebrno-czarne siodło do ujeżdżania</li>
-                        <li class="custom-bullet">Czarne ogłowie z nachrapnikiem</li>
-                        <li class="custom-bullet">Wyściełana biała podkładka pod siodło</li>
-                        <li class="custom-bullet">Owijki ze zdjęcia (nazywają się owijki)</li>
-                        <li class="custom-bullet">Śnieżnobiałe kokardy sunset trails</li>
-                    </ul>
-                </div>
-
-            </div>
         </div>
+    </div>
 
-    </main>
-
-    <footer>
-        <div class="social-links">
-            <a href="https://discord.gg/UBC7QpCpMR" target="_blank"><img src="discord.png" alt="Discord"></a>
-            <a href="https://www.instagram.com/cloudswanss/" target="_blank"><img src="ig.png" alt="Instagram"></a>
-            <a href="https://www.tiktok.com/@cloudswanss" target="_blank"><img src="tiktok.png" alt="TikTok"></a>
+    <div class="animate-in" style="animation-delay: 0.7s; text-align: center;">
+        <div style="background-color: #FFFFFF; padding: 20px; border-radius: 12px;
+            font-weight: 700; font-size: 1.2em; box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            margin: 0 auto; max-width: 600px; border: 2px solid var(--secondary-color);">
+            <strong>Całkowity Koszt (za sam strój):</strong><br>
+            <strong>71 650 JS</strong> lub <strong>833 SC</strong><br>
+            <span style="font-size: 0.9em;">(+ 950 SC koń + 19 SC grzywa)</span>
         </div>
-        <p>© 2025 Cloud Swans | Serwer Emerald Forest | Założono: 27.04.2025</p>
-    </footer>
+    </div>
+
+    <div class="cta-button animate-in" style="animation-delay: 0.9s; margin-top: 40px;">
+        <a href="rekrutacja.html" class="button">ZASADY REKRUTACJI</a>
+    </div>
+
+</main>
+
+<footer>
+    <div class="social-links">
+        <a href="https://discord.gg/UBC7QpCpMR" target="_blank"><img src="discord.png" alt="Discord"></a>
+        <a href="https://www.instagram.com/cloudswanss/" target="_blank"><img src="ig.png" alt="Instagram"></a>
+        <a href="https://www.tiktok.com/@cloudswanss" target="_blank"><img src="tiktok.png" alt="TikTok"></a>
+    </div>
+    <p>© 2025 Cloud Swans | Serwer Emerald Forest | Założono: 27.04.2025</p>
+</footer>
 
 </body>
 </html>
