@@ -3,83 +3,211 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cloud Swans | Home</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Cloud Swans - Elegancja w Chmurze</title>
+    <link rel="stylesheet" href="style.css"> 
 </head>
 <body>
 
     <header>
         <div class="logo-container">
-            <img src="logo.png" alt="Logo Cloud Swans">
+            <img src="logo-swans-placeholder.png" alt="Cloud Swans Logo">
             <h1>Cloud Swans</h1>
         </div>
         <nav>
             <ul>
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="oklubie.html">O Klubie</a></li>
-                <li><a href="rekrutacja.html">Rekrutacja</a></li>
-                <li><a href="zarzad.html">Zarząd</a></li>
-                <li><a href="strojklubowy.html">Strój Klubowy</a></li>
-                <li><a href="galeria.html">Galeria</a></li>
+                <li><a href="#home" class="active">Strona Główna</a></li>
+                <li><a href="#about">O nas</a></li>
+                <li><a href="#recruitment">Rekrutacja</a></li>
+                <li><a href="#clothing">Strój Klubowy</a></li>
+                <li><a href="#gallery">Galeria</a></li>
+                <li><a href="#management">Zarząd</a></li>
             </ul>
         </nav>
     </header>
 
     <main class="main-content">
         
-        <div class="hero-image hero-home" style="background-image: url('zdjecie6.png');">
-            <div class="hero-overlay animate-in" style="animation-delay: 0.1s;">
-                <h1>CLOUD SWANS</h1>
-                <p>Where elegance meets harmony – swans dancing among the clouds.</p>
-                <div class="cta-button" style="margin-top: 30px;">
-                    <a href="oklubie.html" class="button">Poznaj Nas</a>
+        <section id="home">
+            <div class="hero-image" style="background-image: url('hero-background.jpg');">
+                <div class="hero-overlay">
+                    <h1>Witamy w Cloud Swans</h1>
+                    <p class="intro-text-center" style="color: white; font-size: 1.3em;">
+                        Elegancja spotyka innowację. Jesteśmy Twoim partnerem w cyfrowej transformacji.
+                    </p>
+                    <div class="cta-button">
+                        <a href="#recruitment" class="button">Dołącz do nas!</a>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="section-block intro-text-center animate-in" style="animation-delay: 0.4s;">
-            <h2>Wyróżnij się Elegancją</h2>
-            <p>Cloud Swans to nie tylko klub ujeżdżeniowy, przygotuj się na wejście wyżej, po same chmury.</p>
+        <section id="about" class="section-block animate-in">
+            <h2>O Nas - Dlaczego My?</h2>
+            <p class="intro-text-center">
+                Jesteśmy liderami w dostarczaniu rozwiązań chmurowych, koncentrując się na estetyce, wydajności i bezpieczeństwie. Nasze łabędzie prowadzą Cię przez cyfrowe niebo.
+            </p>
 
             <div class="feature-grid">
-                
                 <div class="feature-box">
-                    <h4>✧ DRESSAGE ✧</h4>
-                    <p>Skupiamy się na ujeżdżeniu, doskonaląc każdą figurę i ruch. Mamy pięć grup zaawansowania. </p>
+                    <h4>Bezpieczeństwo</h4>
+                    <p>Standardy szyfrowania na poziomie bankowym dla Twoich danych.</p>
                 </div>
-                
                 <div class="feature-box">
-                    <h4>✧ ESTETYKA ✧</h4>
-                    <p>Czyste, jasne barwy, spójny strój i koń Fryzyjski 3. generacji — nasza wizytówka.</p>
+                    <h4>Skalowalność</h4>
+                    <p>Rozwiązania rosną razem z Twoją firmą. Płać tylko za to, czego używasz.</p>
                 </div>
-                
                 <div class="feature-box">
-                    <h4>✧ WEEKENDY ✧</h4>
-                    <p>Spotkania, treningi i integracje odbywają się głównie wieczorami w weekendy, aby każdy mógł dołączyć. Szanujemy twój czas i życie prywatne.</p>
+                    <h4>Estetyka</h4>
+                    <p>Projektowanie z dbałością o każdy detal i doświadczenie użytkownika (UX).</p>
                 </div>
+                <div class="feature-box">
+                    <h4>Wsparcie</h4>
+                    <p>24/7. Jesteśmy zawsze gotowi, aby pomóc Ci latać wyżej.</p>
+                </div>
+            </div>
+        </section>
 
-                 <div class="feature-box">
-                    <h4>✧ INTEGRACJA ✧</h4>
-                    <p>Nawiążesz znajomości, gdy będziesz gotowy! Organizujemy spotkania pełne rozmów i zabawy, nie tylko treningi, a nikt nie zmusza Cię do kontaktów na siłę. Dośc ujeżdżenia? Rozegraj z nami spotkanie fabularne!</p>
+        <section id="recruitment" class="section-block animate-in">
+            <h2>Rekrutacja - Leć z Nami</h2>
+            
+            <div class="recruitment-status">
+                <h3>Kliknij, aby sprawdzić status rekrutacji!</h3>
+                <div class="status-details">
+                    <p><strong>Status: Otwarty</strong></p>
+                    <p>Czekamy na utalentowanych programistów i projektantów.</p>
                 </div>
-                </div>
+            </div>
+            
+            <div class="recruitment-block recruitment-for">
+                <h3>Dla kogo szukamy talentów:</h3>
+                <ul>
+                    <li class="custom-bullet">Programiści Full-Stack (Python/React)</li>
+                    <li class="custom-bullet">Eksperci od Chmury (AWS, Azure)</li>
+                    <li class="custom-bullet">Projektanci UX/UI z poczuciem estetyki</li>
+                </ul>
+            </div>
+
+            <div class="recruitment-block recruitment-against">
+                <h3>Czego oczekujemy:</h3>
+                <ul>
+                    <li class="custom-bullet">Minimum 3 lata doświadczenia w branży.</li>
+                    <li class="custom-bullet">Zaangażowania i pasji do czystego kodu.</li>
+                    <li class="custom-bullet">Umiejętności pracy w zespole (Scrum/Agile).</li>
+                </ul>
+            </div>
 
             <div class="cta-button">
-                <a href="rekrutacja.html" class="button" style="margin-top: 50px;">Dołacz do cloud Swans</a>
+                <a href="#" class="button">Wyślij swoje CV</a>
             </div>
-        </div>
+        </section>
+
+        <section id="clothing" class="section-block animate-in">
+            <h2>Strój Klubowy - Nasza Elegancja</h2>
+            
+            <div class="clothing-layout-top-image">
+                
+                <div class="clothing-image-top">
+                    <img src="clothing-kit-placeholder.jpg" alt="Strój Klubowy Cloud Swans">
+                </div>
+                
+                <div class="cost-block-top">
+                    Cena całkowita zestawu: <strong>$199.99 PLN</strong> (Netto)
+                </div>
+
+                <div class="clothing-details-bottom">
+                    <div class="clothing-item">
+                        <h4>Elementy Zestawu</h4>
+                        <ul>
+                            <li class="custom-bullet">Koszula Polo 'Cloud' (biała)</li>
+                            <li class="custom-bullet">Softshell 'Swans' (różowy)</li>
+                            <li class="custom-bullet">Eleganckie Spodnie (czarne)</li>
+                            <li class="custom-bullet">Pin z Logo Łabędzia</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="clothing-item">
+                        <h4>Specyfikacja Techniczna</h4>
+                        <ul>
+                            <li class="custom-bullet">Materiał: Oddychający Micro-Mesh</li>
+                            <li class="custom-bullet">Logo: Haft komputerowy HD</li>
+                            <li class="custom-bullet">Rozmiary: S - XXXL (Unisex)</li>
+                            <li class="custom-bullet">Wysyłka: 3-5 dni roboczych</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="cta-button">
+                    <a href="#" class="button">Zamów Strój</a>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="gallery" class="section-block animate-in">
+            <h2>Galeria - Chwile z Projektów</h2>
+            
+            <div class="gallery-grid">
+                <img src="gallery-1.jpg" alt="Projekt Chmura">
+                <img src="gallery-2.jpg" alt="Spotkanie Zespołu">
+                <img src="gallery-3.jpg" alt="Nowoczesny Biurowiec">
+                <img src="gallery-4.jpg" alt="Kawa i Kodowanie">
+            </div>
+
+            <div class="cta-button">
+                <a href="#" class="button">Zobacz więcej</a>
+            </div>
+        </section>
+        
+        <section id="management" class="section-block animate-in">
+            <h2>Nasz Zarząd - Liderzy Wizji</h2>
+
+            <div class="management-owner">
+                <div class="member-card">
+                    <div class="member-photo-placeholder">
+                        <p>Właścicielka</p>
+                    </div>
+                    <h3>Miranda Cloud</h3>
+                    <h4>Założycielka i CEO</h4>
+                    <p>Wizjonerka stojąca za ideą Cloud Swans. Łączy głęboką wiedzę techniczną z niezwykłą dbałością o estetykę i detal.</p>
+                </div>
+            </div>
+
+            <div class="management-grid">
+                
+                <div class="member-card">
+                    <div class="member-photo-placeholder">
+                        <p>CTO</p>
+                    </div>
+                    <h3>Adam Software</h3>
+                    <h4>Dyrektor Techniczny (CTO)</h4>
+                    <p>Odpowiedzialny za infrastrukturę chmurową i nadzór nad wszystkimi backendami. Ekspert AWS i Python.</p>
+                </div>
+                
+                <div class="member-card">
+                    <div class="member-photo-placeholder">
+                        <p>CFO</p>
+                    </div>
+                    <h3>Ewa Finance</h3>
+                    <h4>Dyrektor Finansowa (CFO)</h4>
+                    <p>Dba o to, by finanse firmy były równie przejrzyste i uporządkowane jak nasz kod. Analityk z powołania.</p>
+                </div>
+
+            </div>
+
+        </section>
 
     </main>
 
     <footer>
         <div class="social-links">
-            <a href="https://discord.gg/UBC7QpCpMR" target="_blank"><img src="discord.png" alt="Discord"></a>
-            <a href="https://www.instagram.com/cloudswanss/" target="_blank"><img src="ig.png" alt="Instagram"></a>
-            <a href="https://www.tiktok.com/@cloudswanss" target="_blank"><img src="tiktok.png" alt="TikTok"></a>
+            <a href="#"><img src="facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="instagram.png" alt="Instagram"></a>
+            <a href="#"><img src="linkedin.png" alt="LinkedIn"></a>
         </div>
-        <p>© 2025 Cloud Swans | Serwer Emerald Forest | Założono: 27.04.2025</p>
+        <p>
+            &copy; 2025 Cloud Swans. Projekt i Estetyka: Najlepszy AI. Wszelkie prawa zastrzeżone.
+        </p>
     </footer>
 
 </body>
-
 </html>
