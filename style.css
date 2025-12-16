@@ -485,9 +485,92 @@ footer p {
     }
 }
 
+/* ================================== */
+/* 7. NOWE STYLE DLA ZARZĄDU          */
+/* ================================== */
+
+.management-owner {
+    text-align: center;
+    max-width: 450px; /* Ograniczenie szerokości bloku Właścicielki na środku */
+    margin: 0 auto 60px; /* Margines na dole */
+}
+
+.management-owner .member-card {
+    border-top: 5px solid #b3738e; /* Wyróżnienie */
+    background-color: #fffafb;
+    padding: 40px 30px;
+}
+
+.management-grid {
+    display: grid;
+    /* Dwie równe kolumny */
+    grid-template-columns: 1fr 1fr; 
+    gap: 40px 30px; /* Większy odstęp pionowy */
+    margin-top: 40px;
+}
+
+.member-card {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.member-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.member-photo-placeholder {
+    width: 150px;
+    height: 150px;
+    background-color: #f7e8ef;
+    border: 3px solid #e6a7c0;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.85em;
+    color: #b3738e;
+    font-weight: 600;
+    text-align: center;
+    overflow: hidden; /* Na wypadek, gdybyś wstawił obrazek większy niż 150px */
+}
+
+.member-photo-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.member-card h3 {
+    font-size: 1.6em;
+    margin-bottom: 5px;
+    color: #c994ad;
+}
+
+.member-card h4 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1em;
+    color: #6a6a6a;
+    font-weight: 500;
+    margin-bottom: 15px;
+    border-bottom: 1px dotted #f0e0e6;
+    padding-bottom: 10px;
+}
+
+.member-card p {
+    font-size: 0.95em;
+    margin-top: 15px;
+    line-height: 1.6;
+}
 
 /* ================================== */
-/* 6. RESPONSIVE DESIGN (TELEFONY)   */
+/* 8. RESPONSIVE DESIGN (TELEFONY)   */
 /* ================================== */
 @media (max-width: 900px) {
     
@@ -583,6 +666,17 @@ footer p {
         margin-bottom: 20px;
     }
 
+    /* ZARZĄD - Zmiana na 1 kolumnę */
+    .management-owner {
+         max-width: 100%; /* Właścicielka może się rozszerzyć */
+         margin-bottom: 40px;
+    }
+
+    .management-grid {
+        grid-template-columns: 1fr; /* Zmiana z 2 kolumn na 1 na telefonach */
+        gap: 25px;
+    }
+
     /* STOPKA */
     footer {
         padding: 30px 3%;
@@ -598,4 +692,13 @@ footer p {
     footer p {
         margin-top: 10px;
     }
+.member-photo {
+    width: 100%;
+    max-width: 240px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 12px; /* KWADRAT z lekkim zaokrągleniem */
+    display: block;
+    margin: 0 auto 15px;
 }
+
