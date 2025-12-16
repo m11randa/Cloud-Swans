@@ -3,172 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cloud Swans - Elegancja w Chmurze</title>
-    <link rel="stylesheet" href="style.css"> 
+    <title>Cloud Swans | Home</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
         <div class="logo-container">
-            <img src="logo-swans-placeholder.png" alt="Cloud Swans Logo">
+            <img src="logo.png" alt="Logo Cloud Swans">
             <h1>Cloud Swans</h1>
         </div>
         <nav>
             <ul>
-                <li><a href="#home" class="active">Home</a></li>
-                <li><a href="#club">O Klubie</a></li> <li><a href="#recruitment">Rekrutacja</a></li>
-                <li><a href="#management">Zarząd</a></li>
-                <li><a href="#clothing">Strój Klubowy</a></li>
-                <li><a href="#gallery">Galeria</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="oklubie.html">O Klubie</a></li>
+                <li><a href="rekrutacja.html">Rekrutacja</a></li>
+                <li><a href="strojklubowy.html">Strój Klubowy</a></li>
+                <li><a href="galeria.html">Galeria</a></li>
             </ul>
         </nav>
     </header>
 
     <main class="main-content">
         
-        <section id="home">
-            <div class="hero-image" style="background-image: url('{{NAZWA_PLIKU_HERO_TŁO.jpg}}');">
-                <div class="hero-overlay">
-                    <h1>CLOUD SWANS</h1>
-                    <p style="color: white; font-size: 1.1em; font-family: 'Poppins', sans-serif;">
-                        Where elegance meets harmony – swans dancing among the clouds.
-                    </p>
-                    <div class="cta-button">
-                        <a href="#club" class="button">POZNAJ NAS</a>
-                    </div>
+        <div class="hero-image hero-home" style="background-image: url('zdjecie6.png');">
+            <div class="hero-overlay animate-in" style="animation-delay: 0.1s;">
+                <h1>CLOUD SWANS</h1>
+                <p>Where elegance meets harmony – swans dancing among the clouds.</p>
+                <div class="cta-button" style="margin-top: 30px;">
+                    <a href="oklubie.html" class="button">Poznaj Nas</a>
                 </div>
             </div>
-        </section>
+        </div>
 
-        <section id="club" class="section-block animate-in">
+        <div class="section-block intro-text-center animate-in" style="animation-delay: 0.4s;">
             <h2>Wyróżnij się Elegancją</h2>
-            
-            <p class="intro-text-center" style="margin-bottom: 30px;">
-                Cloud Swans to nie tylko klub ujeżdżeniowy, przygotowujemy się na wejście wyżej, po same chmury.
-            </p>
+            <p>Cloud Swans to nie tylko klub ujeżdżeniowy, przygotuj się na wejście wyżej, po same chmury.</p>
 
-            <div class="feature-box" style="border-top: 5px solid #d4a2b8; text-align: left; margin-top: 20px;">
-                <h4>✧ DRESSAGE ✧</h4>
-                <p>Skupiamy się na ujeżdżeniu, doskonaląc każdą figurę i ruch. Mamy pięć grup zaawansowania.</p>
-            </div>
-            
-            <div class="feature-box" style="border-top: 5px solid #d4a2b8; text-align: left; margin-top: 20px;">
-                <h4>✧ ESTETYKA ✧</h4>
-                <p>Czyste, jasne barwy, spójny strój i koń Fryzyjski 3. generacji – nasza wizytówka.</p>
-            </div>
-
-            <div class="feature-box" style="border-top: 5px solid #d4a2b8; text-align: left; margin-top: 20px;">
-                <h4>✧ WEEKENDY ✧</h4>
-                <p>Spotkania, treningi i integracje odbywają się głównie wieczorami w weekendy, aby każdy mógł dołączyć. Szanujemy twój czas i życie prywatne.</p>
-            </div>
-            
-            <div class="feature-box" style="border-top: 5px solid #d4a2b8; text-align: left; margin-top: 20px;">
-                <h4>✧ INTEGRACJA ✧</h4>
-                <p>Nawiążesz znajomości, gdy będziesz gotowy! Organizujemy spotkania pełne rozmów i zabawy, nie tylko treningi, a nikt nie zmusza Cię do kontaktów na siłę. Dość ujeżdżenia? Rozegraj z nami spotkania fabularne!</p>
-            </div>
-
-            <div style="text-align: center; margin-top: 30px; font-size: 1.1em;">
-                <a href="#recruitment" style="font-weight: 600;">Dołącz do Cloud Swans</a>
-            </div>
-            
-        </section>
-
-
-        <section id="recruitment" class="section-block animate-in">
-            <h2>Rekrutacja - Leć z Nami</h2>
-            
-            <div class="recruitment-status">
-                <h3>Kliknij, aby sprawdzić status rekrutacji!</h3>
-                <div class="status-details">
-                    <p><strong>Status: Otwarty</strong></p>
-                    <p>Czekamy na utalentowanych programistów i projektantów.</p>
+            <div class="feature-grid">
+                
+                <div class="feature-box">
+                    <h4>✧ DRESSAGE ✧</h4>
+                    <p>Skupiamy się na ujeżdżeniu, doskonaląc każdą figurę i ruch. Mamy pięć grup zaawansowania. </p>
                 </div>
-            </div>
-            
-            <div class="recruitment-block recruitment-for">
-                <h3>Dla kogo szukamy talentów:</h3>
-                <ul>
-                    <li class="custom-bullet">Mistrzowie Ujeżdżenia na najwyższym poziomie</li>
-                    <li class="custom-bullet">Członkowie z dużym poczuciem estetyki i stylu</li>
-                    <li class="custom-bullet">Osoby aktywne i chętne do integracji.</li>
-                </ul>
-            </div>
+                
+                <div class="feature-box">
+                    <h4>✧ ESTETYKA ✧</h4>
+                    <p>Czyste, jasne barwy, spójny strój i koń Fryzyjski 3. generacji — nasza wizytówka.</p>
+                </div>
+                
+                <div class="feature-box">
+                    <h4>✧ WEEKENDY ✧</h4>
+                    <p>Spotkania, treningi i integracje odbywają się głównie wieczorami w weekendy, aby każdy mógł dołączyć. Szanujemy twój czas i życie prywatne.</p>
+                </div>
+
+                 <div class="feature-box">
+                    <h4>✧ INTEGRACJA ✧</h4>
+                    <p>Nawiążesz znajomości, gdy będziesz gotowy! Organizujemy spotkania pełne rozmów i zabawy, nie tylko treningi, a nikt nie zmusza Cię do kontaktów na siłę. Dośc ujeżdżenia? Rozegraj z nami spotkanie fabularne!</p>
+                </div>
+                </div>
+
             <div class="cta-button">
-                <a href="#" class="button">Wyślij swoje CV</a>
+                <a href="rekrutacja.html" class="button" style="margin-top: 50px;">Dołacz do cloud Swans</a>
             </div>
-        </section>
+        </div>
 
-        <section id="management" class="section-block animate-in">
-            <h2>Nasz Zarząd - Liderzy Wizji</h2>
-            <div class="management-owner">
-                <div class="member-card">
-                    <div class="member-photo-placeholder">
-                        <p>Właścicielka</p>
-                    </div>
-                    <h3>Miranda Cloud</h3>
-                    <h4>Założycielka i CEO</h4>
-                    <p>Wizjonerka i serce Cloud Swans. Dba o perfekcję na każdym poziomie.</p>
-                </div>
-            </div>
-            <div class="management-grid">
-                <div class="member-card">
-                    <div class="member-photo-placeholder">
-                        <p>Zarząd 1</p>
-                    </div>
-                    <h3>Adam Software</h3>
-                    <h4>Wiceprezes ds. Projektów</h4>
-                    <p>Odpowiedzialny za organizację wydarzeń i eventów fabularnych.</p>
-                </div>
-                <div class="member-card">
-                    <div class="member-photo-placeholder">
-                        <p>Zarząd 2</p>
-                    </div>
-                    <h3>Ewa Finance</h3>
-                    <h4>Opiekun Estetyki i Mediów</h4>
-                    <p>Dba o spójność wizualną klubu i prowadzenie social mediów.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="clothing" class="section-block animate-in">
-            <h2>Strój Klubowy - Nasza Elegancja</h2>
-            <div class="clothing-layout-top-image">
-                <div class="clothing-image-top">
-                    <img src="clothing-kit-placeholder.jpg" alt="Strój Klubowy Cloud Swans">
-                </div>
-                <div class="cost-block-top">
-                    Cena całkowita zestawu: <strong>$199.99 PLN</strong> (Netto)
-                </div>
-            </div>
-            <div class="cta-button">
-                <a href="#" class="button">Zamów Strój</a>
-            </div>
-        </section>
-
-        <section id="gallery" class="section-block animate-in">
-            <h2>Galeria - Chwile z Projektów</h2>
-            <div class="gallery-grid">
-                <img src="gallery-1.jpg" alt="Projekt Chmura">
-                <img src="gallery-2.jpg" alt="Spotkanie Zespołu">
-                <img src="gallery-3.jpg" alt="Nowoczesny Biurowiec">
-                <img src="gallery-4.jpg" alt="Kawa i Kodowanie">
-            </div>
-            <div class="cta-button">
-                <a href="#" class="button">Zobacz więcej</a>
-            </div>
-        </section>
-        
     </main>
 
     <footer>
         <div class="social-links">
-            <a href="#"><img src="facebook.png" alt="Facebook"></a>
-            <a href="#"><img src="instagram.png" alt="Instagram"></a>
-            <a href="#"><img src="linkedin.png" alt="LinkedIn"></a>
+            <a href="https://discord.gg/UBC7QpCpMR" target="_blank"><img src="discord.png" alt="Discord"></a>
+            <a href="https://www.instagram.com/cloudswanss/" target="_blank"><img src="ig.png" alt="Instagram"></a>
+            <a href="https://www.tiktok.com/@cloudswanss" target="_blank"><img src="tiktok.png" alt="TikTok"></a>
         </div>
-        <p>
-            &copy; 2025 Cloud Swans. Projekt i Estetyka: Najlepszy AI. Wszelkie prawa zastrzeżone.
-        </p>
+        <p>© 2025 Cloud Swans | Serwer Emerald Forest | Założono: 27.04.2025</p>
     </footer>
 
 </body>
