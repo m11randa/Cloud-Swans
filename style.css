@@ -692,4 +692,14 @@ footer p {
     footer p {
         margin-top: 10px;
     }
+.member-photo {
+    width: 100%;
+    max-width: 240px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 12px; /* KWADRAT z lekkim zaokrągleniem */
+    display: block;
+    margin: 0 auto 15px;
 }
+
+
